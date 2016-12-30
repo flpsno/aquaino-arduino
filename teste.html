@@ -1,0 +1,135 @@
+<html>
+<head>
+<title>Aquaino</title>
+<meta name="viewport" content="width=device-width"; intial-scale=1; maximum-scale=1>
+
+<script>
+			function BotaoCarga1() {
+			    int  numero  = 1
+                if (numero == 1) { 
+					document.getElementById("carga1").style.backgroundColor = "#FF9696";
+				} else { 
+					document.getElementById("carga1").style.backgroundColor = "#ADFF85";
+				}
+            }
+</script>
+
+<style type="text/css">
+	body { 
+		font-family: Arial; 
+		margin: 0px; 
+	}
+	div > h2 { 
+		color: #00979C; 
+	}
+	
+	.header { 
+		width: 100%; 
+		height: 110px; 
+		border: 10px;
+		background-color: #F6F9F9; 
+		margin-top: 0px; 
+	}
+				
+	.principal {
+		width: 480px;
+		height: 225px;
+		margin-top: 20px; 
+	}
+
+	.quadrado {
+		float:left; 
+		width: 150px;
+		height: 215px;
+		border-style: solid;  
+		border-color: #00979C;
+		text-align: center;
+		cursor: pointer;
+	} 
+	
+	.quadrado2 {
+		float: left; 
+		width: 150px;  
+		height: 155px;
+		border-style: solid;
+		border-color: #00979C;				
+		margin-left: 5px;
+		margin-bottom: 5px;
+		text-align: center;	
+		cursor: pointer;
+	} 
+	
+	.quadrado3 {
+		float: left; 
+		width: 150px;  
+		height: 50px;
+		border-style: solid;
+		border-color: #00979C;		
+		margin-left: 5px;
+		text-align: center;
+		cursor: pointer;		
+	} 
+	
+	h5 { 
+		margin-top: 40px; 
+		margin-bottom: 0px; 
+		color: #00979C; 
+		font-size: 18px;	
+	}
+	
+	p { 
+		font-size: 50px; 
+		margin: 0px; 
+		color: #00979C; 
+	}	
+	
+	.carga { 
+		font-size: 30px; 
+		font-weight: bold; 
+		margin-top: 55px; 
+	}
+	
+	.carga2 { 
+		font-size: 16px; 
+		font-weight: bold; 
+		margin-top: 15px; 
+	}
+
+</style>
+</head>
+<body>
+	<center>
+	<div class="header">
+	</br>
+		<div>
+			<h2>Aquaino - Measurement system</h2>
+		</div>
+	</br>
+	</div>
+
+	<div class="principal">
+
+		<div class = "quadrado"> 
+			<h5>Temperatura:</h5>
+			<p id="sensor1">25&#176;</p>
+		</div> 
+    
+		<div class = "quadrado2" onclick="BotaoCarga1()" id="carga3"> 
+			<p class="carga"> Luz </p> 
+		</div> 
+    
+		<div class = "quadrado2"> 
+			<p class="carga"> Bomba O&sup2;</p> 
+		</div> 
+  
+		<div class = "quadrado3"> 
+			<p class="carga2">Modo Auto</p> 
+		</div> 
+	
+		<div class = "quadrado3"> 
+			<p class="carga2">Modo Auto</p> 
+		</div> 	
+	</div>  
+	</center>
+</body>  
+</html>

@@ -1,0 +1,92 @@
+
+boolean strContains(char *str, char *sfind) {
+  char found = 0;
+  char index = 0;
+  char len;
+
+  len = strlen(str);
+
+  if (strlen(sfind) > len) {
+    return false;
+  }
+
+  while (index < len) {
+    if (str[index] == sfind[found]) {
+      found++;
+      if (strlen(sfind) == found) {
+        return true;
+      }
+    }
+    else {
+      found = 0;
+    }
+    index++;
+  }
+  return false;
+}
+
+void strClear(char *str, char length) {
+  for(int i = 0; i < length; i++) {
+    str[i] = 0;
+  }
+}
+
+
+bool saoIguais(const char *s1, const char *s2)
+{
+  for (int i = 0; s1[i] == s2[i]; ++i)
+  {
+    if (s1[i] == 0)
+      return true;
+  }
+  return false;
+}
+
+
+
+
+
+
+void setRGB(int R, int G, int B) {
+  analogWrite(RED, R);
+  analogWrite(GREEN, G);
+  analogWrite(BLUE, B);
+}
+
+
+int getLuz() {
+  //Zera a variável Luz
+  Luz = 0; 
+  //Lê o valor do sensor (LDR ligado ao pino A0) e guarda na variável Luz    
+  Luz = analogRead(LRD); 
+  // Mapeia o valor retornado e converte para porcentagem
+  Luz = map(Luz, 0, 1023, 0, 100);
+
+  return Luz;  
+}
+
+
+
+
+
+
+
+
+
+Arduino: 1.6.5 (Windows 7), Placa:"Arduino/Genuino Uno"
+
+O sketch usa 33.392 bytes (103%) de espaço de armazenamento para programas. O máximo são 32.256 bytes.
+Variáveis globais usam 1.021 bytes (49%) de memória dinâmica, deixando 1.027 bytes para variáveis locais. O máximo são 2.048 bytes.
+processing.app.debug.RunnerException: Sketch muito grande; veja http://www.arduino.cc/en/Guide/Troubleshooting#size para dicas de como reduzi-lo.
+	at processing.app.debug.Compiler.size(Compiler.java:340)
+	at processing.app.debug.Compiler.build(Compiler.java:123)
+	at processing.app.Sketch.build(Sketch.java:1109)
+	at processing.app.Sketch.exportApplet(Sketch.java:1127)
+	at processing.app.Sketch.exportApplet(Sketch.java:1113)
+	at processing.app.Editor$DefaultExportHandler.run(Editor.java:2380)
+	at java.lang.Thread.run(Thread.java:745)
+Sketch muito grande; veja http://www.arduino.cc/en/Guide/Troubleshooting#size para dicas de como reduzi-lo.
+
+  Este relatório deveria ter mais informações
+  "Mostrar saída verbosa durante a compilação"
+  habilitado em Arquivo > Preferências.
